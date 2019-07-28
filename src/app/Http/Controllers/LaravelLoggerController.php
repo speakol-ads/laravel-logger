@@ -1,4 +1,3 @@
-+ One clip added to clipboard!!!+ One clip added to clipboard!!!
 <?php
 
 namespace jeremykenedy\LaravelLogger\App\Http\Controllers;
