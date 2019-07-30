@@ -8,7 +8,7 @@
 		@if(in_array('user',explode(',', config('LaravelLogger.searchFields'))))
 		<div class="col">
 			<select class="form-control" name="user">
-				<option value="" selected>All</option>
+				<option value="" selected>User</option>
 				@foreach($users as $user)
 				<option value="{{$user->id}}" {{request()->get('user') && request()->get('user') == $user->id ? 'selected':''}}>{{$user->name}}</option>
 				@endforeach
@@ -18,7 +18,7 @@
 		@if(in_array('method',explode(',', config('LaravelLogger.searchFields'))))
 		<div class="col">
 			<select class="form-control" name="method">
-				<option value="" selected>All</option>
+				<option value="" selected>Method</option>
 				<option value="GET" {{request()->get('method') && request()->get('method') == 'GET' ? 'selected':''}}>GET</option>
 				<option value="POST" {{request()->get('method') && request()->get('method') == 'POST' ? 'selected':''}}>POST</option>
 				<option value="PUT" {{request()->get('method') && request()->get('method') == 'PUT' ? 'selected':''}}>PUT</option>
